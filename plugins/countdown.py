@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 import time
 import threading
 from bot import Bot
+import bot
 
 CHANNEL_ID = '-1002297158841'  # Use '@channe
 
