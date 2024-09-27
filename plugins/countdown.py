@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import time
 import threading
 from bot import Bot
-import bot
+from config import ADMINS
 
 LOG_ID = '-1001963424186'  
 MESSAGE_ID = '55'# Use '@channe
@@ -26,12 +26,12 @@ async def send_remaining_time(message: Message):  # Accept the message as a para
         
         # Beautified message using a single f-string with triple quotes
         lexica = f"""
-📅 **Exam Countdown Reminder**
-
-⏳ Time Remaining For NEET 25:
-🗓️ **Date:** {exam_date.strftime('%Y-%m-%d')}
-📆 **Time Left:** {time_left.days} days, {hours} hours, and {minutes} minutes
-
+<b>📅 Exam Countdown Reminder</b><br>
+<br>
+<code>⏳ Time Remaining For NEET 25:</code><br>
+🗓️ <b>Date:</b> {exam_date.strftime('%Y-%m-%d')}<br>
+📆 <b>Time Left:</b> {time_left.days} days, {hours} hours, and {minutes} minutes<br>
+<br>
 Stay focused and keep up the good work! 💪✨
         """
         
@@ -44,10 +44,10 @@ Stay focused and keep up the good work! 💪✨
 async def countdown_task(message: Message):  # Accept the message as a parameter
     while True:
         await send_remaining_time(message)  # Send the countdown message to the user
-        await asyncio.sleep(20)  #  # Wait for 15 minutes (900 seconds)
+        await asyncio.sleep(82800)  #  # Wait for 15 minutes (900 seconds)
 
 # Command to start the countdown
-@Bot.on_message(filters.command("countdown") , group =8348)
+@Bot.on_message(filters.command("countdown") & filters.user(ADMINS), group =8348)
 async def start_command(client: Bot, message: Message):
     await message.reply_text("Countdown initiated! I will send the remaining time until the exam every 15 minutes.")
     await send_remaining_time(message)  # Send the remaining time immediately
