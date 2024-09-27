@@ -23,7 +23,7 @@ async def send_remaining_time():
         minutes, seconds = divmod(remainder, 60)
         
         # Beautified message using a single f-string with triple quotes
-        message = f"""
+        lexica = f"""
 📅 **Exam Countdown Reminder**
 
 ⏳ Time Remaining For NEET 25 :
@@ -32,7 +32,7 @@ async def send_remaining_time():
 
 Stay focused and keep up the good work! 💪✨
         """
-        await Bot.send_message(CHANNEL_ID, message)
+        await Bot.send_message(chat_id = CHANNEL_ID, text = f"{lexica}")
 
 # Function to handle the countdown
 async def countdown_task():
