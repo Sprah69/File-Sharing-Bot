@@ -44,7 +44,7 @@ Stay focused and keep up the good work! 💪✨
 async def countdown_task(message: Message):  # Accept the message as a parameter
     while True:
         await send_remaining_time(message)  # Send the countdown message to the user
-        await asyncio.sleep(82800)  #  # Wait for 15 minutes (900 seconds)
+        await asyncio.sleep(60)  #  # Wait for 15 minutes (900 seconds)
 
 # Command to start the countdown
 @Bot.on_message(filters.command("countdown") & filters.user(ADMINS), group =8348)
