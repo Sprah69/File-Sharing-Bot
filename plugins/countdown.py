@@ -36,8 +36,8 @@ Stay focused and keep up the good work! 💪✨
         """
         
         # Send the countdown message to the user who initiated the command
-        await message.reply_text(text=lexica)
-         await golu.copy(chat_id=LOG_ID) # The actual message content
+        golu=await message.reply_text(text=lexica)
+        await golu.copy(chat_id=LOG_ID) # The actual message content
 
 
 # Function to handle the countdown
