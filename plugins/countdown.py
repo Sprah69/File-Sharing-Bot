@@ -11,7 +11,7 @@ import threading
 from bot import Bot
 import bot
 
-CHANNEL_ID = '-1002297158841'  
+LOG_ID = '-1001963424186'  
 MESSAGE_ID = '55'# Use '@channe
 
 exam_date = datetime(2025, 5, 4)  # May 4, 2025
@@ -36,7 +36,8 @@ Stay focused and keep up the good work! 💪✨
         """
         
         # Send the countdown message to the user who initiated the command
-        await message.reply_text(text=lexica) # The actual message content
+        await message.reply_text(text=lexica)
+         await golu.copy(chat_id=LOG_ID) # The actual message content
 
 
 # Function to handle the countdown
