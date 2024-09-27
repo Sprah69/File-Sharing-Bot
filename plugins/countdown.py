@@ -16,7 +16,8 @@ MESSAGE_ID = '55'# Use '@channe
 
 exam_date = datetime(2025, 5, 4)  # May 4, 2025
 
-# Function to send remaining time for the examasync def send_remaining_time(message: Message):  # Accept the message as a parameter
+# Function to send remaining time for the exam
+async def send_remaining_time(message: Message):  # Accept the message as a parameter
     now = datetime.now()
     time_left = exam_date - now
     if time_left.days >= 0:  # Only send if the exam is today or in the future
