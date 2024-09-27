@@ -33,7 +33,7 @@ async def send_remaining_time():
 
 Stay focused and keep up the good work! 💪✨
         """
-        await self.send_message(chat_id = CHANNEL_ID, text = f"{lexica}")
+        await Client.send_message(CHANNEL_ID, lexica)
 
 # Function to handle the countdown
 async def countdown_task():
