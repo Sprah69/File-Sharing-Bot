@@ -35,7 +35,7 @@ async def send_remaining_time():
 Stay focused and keep up the good work! 💪✨
         """
         await message.reply_text(text=f"{lexica}")  # The actual message content
-)
+
 
 # Function to handle the countdown
 async def countdown_task():
