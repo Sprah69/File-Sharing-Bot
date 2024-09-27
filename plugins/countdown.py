@@ -11,7 +11,8 @@ import threading
 from bot import Bot
 import bot
 
-CHANNEL_ID = '-1002297158841'  # Use '@channe
+CHANNEL_ID = '-1002297158841'  
+MESSAGE_ID = '55'# Use '@channe
 
 exam_date = datetime(2025, 5, 4)  # May 4, 2025
 
@@ -33,7 +34,7 @@ async def send_remaining_time():
 
 Stay focused and keep up the good work! 💪✨
         """
-        await Client.send_message(CHANNEL_ID, lexica)
+        await bot.edit_message_text(int(CHANNEL_ID), MESSAGE_ID, lexica)
 
 # Function to handle the countdown
 async def countdown_task():
