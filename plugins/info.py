@@ -109,5 +109,5 @@ async def send_server_info(client: Bot, message: Message):
     stats_message = get_system_stats()
     
     # Send the stats as a reply to the user
-    await message.reply_text(stats_message, parse_mode="html")
+    await message.reply_text(stats_message)
 
