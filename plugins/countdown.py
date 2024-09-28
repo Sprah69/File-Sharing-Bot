@@ -49,7 +49,7 @@ async def countdown_task(message: Message):  # Accept the message as a parameter
 # Command to start the countdown
 @Bot.on_message(filters.command("countdown") & filters.user(ADMINS), group =8348)
 async def start_command(client: Bot, message: Message):
-    await message.reply_text("Countdown initiated! I will send the remaining time until the exam every 15 minutes.")
+    await message.reply_text("Countdown initiated! I will send the remaining time until the exam every 60 minutes.")
     await send_remaining_time(message)  # Send the remaining time immediately
     # Start the countdown task
     asyncio.create_task(countdown_task(message))  # Create a new task for the countdown
