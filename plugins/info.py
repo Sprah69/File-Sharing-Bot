@@ -103,7 +103,7 @@ def get_system_stats():
     return stats_message
 
 # Command to fetch and send server stats
-@Bot.on_message(filters.command("info"))
+@Bot.on_message(filters.command("info"), group=7664)
 async def send_server_info(client: Bot, message: Message):
     # Get the system stats
     stats_message = get_system_stats()
